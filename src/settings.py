@@ -15,7 +15,7 @@ from dataset_tools.templates import (
 ##################################
 PROJECT_NAME: str = "Oil Storage Tanks"
 PROJECT_NAME_FULL: str = "Oil Storage Tanks"
-HIDE_DATASET = True  # set False when 100% sure about repo quality
+HIDE_DATASET = False  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
@@ -73,7 +73,7 @@ SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
 TAGS: Optional[List[str]] = None
 
 
-SECTION_EXPLORE_CUSTOM_DATASETS: Optional[List[str]] = ["images_patches"]
+SECTION_EXPLORE_CUSTOM_DATASETS: Optional[List[str]] = ["image_patches"]
 
 ##################################
 ###### ? Checks. Do not edit #####
