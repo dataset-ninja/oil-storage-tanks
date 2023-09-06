@@ -1,4 +1,4 @@
-**Oil Storage Tanks** is a dataset for an object detection task. Possible applications of the dataset could be in the oil and gas and logistics industries. 
+**Oil Storage Tanks** is a dataset for an object detection task. Possible applications of the dataset could be in the oil&gas and logistics industries. 
 
 The dataset consists of 10100 images with 5820 labeled objects belonging to 1 single class (*floating head tank*).
 
