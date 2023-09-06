@@ -13,37 +13,42 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = None
-PROJECT_NAME_FULL: str = None
+PROJECT_NAME: str = "Oil Storage Tanks"
+PROJECT_NAME_FULL: str = "Oil Storage Tanks"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
 # * After uploading to instance ##
 ##################################
-LICENSE: License = None
-APPLICATIONS: List[Union[Industry, Domain, Research]] = None
-CATEGORY: Category = None
+LICENSE: License = License.Unknown()
+APPLICATIONS: List[Union[Industry, Domain, Research]] = [
+    Industry.OilAndGas(is_used=False),
+    Industry.Logistics(is_used=False),
+]
+CATEGORY: Category = Category.EnergyAndUtilities(extra=Category.Aerial())
 
-CV_TASKS: List[CVTask] = None
-ANNOTATION_TYPES: List[AnnotationType] = None
+CV_TASKS: List[CVTask] = CVTask.ObjectDetection()
+ANNOTATION_TYPES: List[AnnotationType] = AnnotationType.ObjectDetection()
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
-    RELEASE_YEAR: int = None
+    RELEASE_YEAR: int = 2019
 
-HOMEPAGE_URL: str = None
+HOMEPAGE_URL: str = "https://www.kaggle.com/datasets/towardsentropy/oil-storage-tanks"
 # e.g. "https://some.com/dataset/homepage"
 
 PREVIEW_IMAGE_ID: int = None
 # This should be filled AFTER uploading images to instance, just ID of any image.
 
-GITHUB_URL: str = None
+GITHUB_URL: str = "https://github.com/dataset-ninja/oil-storage-tanks"
 # URL to GitHub repo on dataset ninja (e.g. "https://github.com/dataset-ninja/some-dataset")
 
 ##################################
 ### * Optional after uploading ###
 ##################################
-DOWNLOAD_ORIGINAL_URL: Optional[Union[str, dict]] = None
+DOWNLOAD_ORIGINAL_URL: Optional[
+    Union[str, dict]
+] = "https://www.kaggle.com/datasets/towardsentropy/oil-storage-tanks/download?datasetVersionNumber=1"
 # Optional link for downloading original dataset (e.g. "https://some.com/dataset/download")
 
 CLASS2COLOR: Optional[Dict[str, List[str]]] = None
@@ -53,10 +58,12 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 # Use dict key to specify name for a button
 PAPER: Optional[Union[str, List[str], Dict[str, str]]] = None
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = None
+REPOSITORY: Optional[
+    Union[str, List[str], Dict[str, str]]
+] = "https://github.com/kheyer/Oil-Tank-Volume-Estimation"
 
 CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = None
+AUTHORS: Optional[List[str]] = ["Karl Heyer"]
 
 ORGANIZATION_NAME: Optional[Union[str, List[str]]] = None
 ORGANIZATION_URL: Optional[Union[str, List[str]]] = None
@@ -66,7 +73,7 @@ SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
 TAGS: Optional[List[str]] = None
 
 
-SECTION_EXPLORE_CUSTOM_DATASETS: Optional[List[str]] = None
+SECTION_EXPLORE_CUSTOM_DATASETS: Optional[List[str]] = ["large_images"]
 
 ##################################
 ###### ? Checks. Do not edit #####
