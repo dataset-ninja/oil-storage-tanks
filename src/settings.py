@@ -27,8 +27,8 @@ APPLICATIONS: List[Union[Industry, Domain, Research]] = [
 ]
 CATEGORY: Category = Category.EnergyAndUtilities(extra=Category.Aerial())
 
-CV_TASKS: List[CVTask] = CVTask.ObjectDetection()
-ANNOTATION_TYPES: List[AnnotationType] = AnnotationType.ObjectDetection()
+CV_TASKS: List[CVTask] = [CVTask.ObjectDetection()]
+ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.ObjectDetection()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
 if RELEASE_DATE is None:
