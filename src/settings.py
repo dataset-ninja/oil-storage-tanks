@@ -73,7 +73,7 @@ SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = None
 TAGS: Optional[List[str]] = None
 
 
-SECTION_EXPLORE_CUSTOM_DATASETS: Optional[List[str]] = ["large_images"]
+SECTION_EXPLORE_CUSTOM_DATASETS: Optional[List[str]] = ["images_patches"]
 
 ##################################
 ###### ? Checks. Do not edit #####
